@@ -1,0 +1,57 @@
+@import "../../../style/variables.css";
+
+.filters_section.search_page{
+    #limit_filter{
+        grid-column: 5 / 8;
+    }
+}
+
+.search-title {
+    margin-bottom: 0.6vw;
+    font-weight: 400;
+    font-size: var(--font-md);
+    color: var(--gray);
+
+    &:nth-last-child(2){
+        margin-bottom: 5vw;  
+    }
+
+    .searchValue{
+        font-weight: 500;
+        color: var(--black); 
+    }
+}
+
+@media (max-width: 1500px){
+
+}
+
+@media (max-width: 1200px){
+
+}
+
+@media (max-width: 992px){
+
+}
+
+@media (max-width: 768px){
+    .search-title {
+        margin-bottom: 1.5vw;
+    }
+}
+
+@media (max-width: 576px){
+
+}
+
+@media (max-width: 375px){
+    .filters_section.search_page{
+        #limit_filter{
+            grid-column: 4 / 6;
+        }
+    }
+
+    .search-title {
+        margin-bottom: 10px;
+    }
+}

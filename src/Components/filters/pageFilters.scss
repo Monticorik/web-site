@@ -1,0 +1,146 @@
+@import "../../style/variables.css";
+
+@mixin filter-style{
+    transition: all 0.3s ease-in;
+    border-radius: 10px;
+    background-color: var(--background);
+    font-size: var(--font-sm) !important;
+    color: var(--gray);
+
+    &--is-disabled{
+        filter: opacity(0.5);
+    }
+
+    &__control{
+        overflow: hidden;
+        border: 2px solid var(--background);
+        border-radius: 10px;
+        padding: 0 0.5vw;
+        height: 2.5vw;
+        max-height: 40px;
+        min-height: 35px !important;
+        background-color: var(--background);
+        cursor: pointer !important;
+
+        &--menu-is-open{
+            border-color: var(--pink);
+            border-bottom: none;
+            border-radius: 10px 10px 0 0; 
+        }
+
+        &:hover{
+            border-color: var(--pink); 
+        }
+
+        &:focus{
+            border-color: var(--pink);
+        }
+    }
+
+    &__indicator{
+        svg{
+            height: var(--font-sm);
+        }
+    }
+
+    &__menu{
+        overflow: hidden;
+        border: 2px solid var(--pink);
+        margin-top: 0;
+        border-top: none;
+        border-radius: 0 0 10px 10px;
+        background-color: var(--background);
+
+        &-notice--no-options{
+            padding: 8px 1vw;
+        }
+    }
+
+    &__option{
+        border-radius: 4px;
+        padding: 8px 1vw;
+        cursor: pointer !important;
+        
+        &:hover{
+            background-color: var(--pink);
+            color: var(--red);
+        }
+
+        &--is-focused{
+            background-color: var(--pink);
+            color: var(--red);
+        }
+
+        &--is-selected{
+            background-color: var(--red);
+            color: var(--white);
+
+            &:hover{
+                background-color: var(--red);
+                color: var(--white);
+            }
+        }
+    }
+
+    @media (max-width: 768px){
+        &__control{
+            border-radius: 5px;
+            padding: 5px;
+            min-height: 35px !important;
+
+            &--menu-is-open{
+                border-radius: 5px 5px 0 0; 
+            }
+        }
+    }
+
+    @media (max-width: 375px){
+        &__control{
+            min-height: 40px !important;
+        }
+    }
+}
+
+label{
+    padding-left: 0.6vw;
+    font-weight: 500;
+    font-size: var(--font-xsm);
+    color: var(--gray);
+    text-transform: uppercase;
+}
+
+.limit{
+    @include filter-style;
+}
+
+.breeds{
+    @include filter-style;
+}
+
+.order{
+    @include filter-style;
+}
+
+.type{
+    @include filter-style;
+}
+
+@media (max-width: 1500px){
+
+}
+
+@media (max-width: 1200px){
+
+}
+
+@media (max-width: 992px){
+
+}
+
+@media (max-width: 768px){
+
+}
+
+@media (max-width: 576px){
+
+}

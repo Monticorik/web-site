@@ -1,0 +1,201 @@
+@import "../../style/variables.css";
+
+.images_block{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    gap: 0.5vw;
+    width: 100%; 
+    height: 32vw;
+    max-height: 700px;
+    min-height: 370px;
+    margin-bottom: 0.6vw; 
+    
+    .grid_img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        a{
+            width: 100%;
+            height: 100%;
+        }
+
+        figure{
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+
+            img{
+                border-radius: 1vw;
+                width: 100%;
+                max-width: 100%;
+                height: 100%;
+                max-height: 100%;
+                object-fit: cover;
+            }
+
+            figcaption.bottom{
+                position: absolute;
+                left: 10px;
+                right: 10px;
+                bottom: 10px;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0.6vw;
+                height: fit-content;
+                padding: 4px;
+                background: white;
+                font-size: var(--font-md);
+                font-weight: 400;
+                text-align: center;
+                color: var(--red);
+            }
+    
+            figcaption.center{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                justify-content: center;
+                align-items: center;
+                display: none;
+                transform: translate(-50%, -50%);
+                border-radius: 20%;
+                width: 2.2vw;
+                min-width: 35px;
+                height: 2.2vw;
+                min-height: 35px;
+                background: white;
+                font-size: var(--font-md);
+                color: var(--red);
+            }
+
+            figcaption{
+                &:active{
+                    background: var(--red);
+                    color: var(--white);
+                }
+            }
+
+            &::before{
+                content: "";
+                display: none;
+            }
+
+            &:hover{
+                figcaption{
+                    display: flex;
+                }
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 1vw;
+                    background: rgba(255, 134, 142, 0.6);
+                }
+            }
+        }
+
+
+    }
+}
+
+.images_block:nth-child(odd){
+    .grid_img:nth-child(1){
+        grid-row: 1 / 3;
+        grid-column: 1 / 2;
+    }
+    .grid_img:nth-child(2){
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+    }
+    .grid_img:nth-child(3){
+        grid-row: 1 / 2;
+        grid-column: 3 / 4;
+    }
+    .grid_img:nth-child(4){
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+    }
+    .grid_img:nth-child(5){
+        grid-row: 2 / 4;
+        grid-column: 2 / 4;
+    }
+}
+
+.images_block:nth-child(even){
+    .grid_img:nth-child(1){
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+    .grid_img:nth-child(2){
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+    }
+    .grid_img:nth-child(3){
+        grid-row: 1 / 3;
+        grid-column: 3 / 4;
+    }
+    .grid_img:nth-child(4){
+        grid-row: 2 / 4;
+        grid-column: 1 / 3;
+    }
+    .grid_img:nth-child(5){
+        grid-row: 3 / 4;
+        grid-column: 3 / 4;
+    }
+}
+
+@media (max-width: 1500px){
+
+}
+
+@media (max-width: 1200px){
+
+}
+
+@media (max-width: 992px){
+
+}
+
+@media (max-width: 768px){
+    .images_block{
+        gap: 1.5vw;
+        height: 78vw;
+        min-height: 330px;
+        margin-bottom: 1.5vw;
+    }
+}
+
+@media (max-width: 576px){
+
+}
+
+@media (max-width: 375px){
+    .images_block{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-height: fit-content;
+        gap: 10px;
+        height: fit-content;
+        margin-bottom: 10px;
+
+        .grid_img figure {
+            img{
+                border-radius: 10px;
+            }
+            &:hover{
+                &::before{
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}

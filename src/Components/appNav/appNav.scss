@@ -1,0 +1,218 @@
+@import '../../style/variables.css';
+
+#main_menu{
+    margin-top: 5%;
+
+    .close_button{
+        display: none;
+    }
+
+    span{
+        font-size: var(--font-sm);
+        font-weight: 500;
+        color: var(--black);
+    }
+
+    .menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 15px;
+        width: 70%;
+    
+        &_option{
+            height: 13vw;
+            max-height: 250px;
+            min-height: 200px;
+            width: 7vw;
+
+            a{
+                width: 100%;
+                height: 100%;
+
+                .menu_button{
+                    height: 100%;
+                    cursor: pointer;
+                }
+            
+                .menu_img{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 75%;
+                    width: 100%;
+                    border: 3px solid rgba(255, 255, 255, 0.6);
+                    border-radius: 12px;
+            
+                    img{
+                        height: -webkit-fill-available;
+                        width: 85%;
+                    }
+                }
+            
+                .menu_text{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 10px;
+                    height: 14%;
+                    width: 100%;
+                    border-radius: 6px;
+                    background-color: var(--white-alt);
+            
+                    span{
+                        font-weight: 400;
+                        color: var(--red);
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                    }
+                }
+
+                &:hover {
+                    .menu_img{
+                        border-color: white;
+                    }
+    
+                    .menu_text{
+                        background-color: var(--pink);
+                    }
+                }
+    
+                &:focus {
+                    outline: none;
+    
+                    .menu_img{
+                        border-color: white;
+                    }
+    
+                    .menu_text{
+                        background-color: var(--pink);
+                    }
+                }
+    
+                &:active{
+                    .menu_img{
+                        border-color: var(--pink);
+                    }
+    
+                    .menu_text{
+                        background-color: var(--red);
+                        
+                        span{
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+        }
+    
+        
+    }
+}
+
+@media (max-width: 1500px){
+    #main_menu{
+        .menu{
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: 1200px){
+    #main_menu{
+        .menu{
+            width: 85%;
+
+            &_option{
+                width: 100px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px){
+    #main_menu{
+        .menu{
+            width: 95%;
+
+            &_option{
+                min-height: 150px;
+                width: 80px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    #main_menu{
+        margin-top: 0;
+
+        .close_button{
+            display: flex;
+            margin-left: auto;
+        }
+
+        .start_text{
+            display: none;
+        }
+
+        .menu{
+            width: 100%;
+            margin-top: 13vh;
+
+            &_option{
+                min-height: 200px;
+                width: 110px;
+            }
+        }
+    }
+
+    .first_page #main_menu {
+        .close_button{
+            display: none;
+        }
+
+        .start_text{
+            display: block;
+            margin-top: 7vh;
+        }
+    }
+        
+
+}
+
+@media (max-width: 576px){
+    #main_menu{
+
+        .menu{            
+            &_option{
+                min-height: 150px;
+                width: 80px;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px){
+    #main_menu{
+        .menu{
+            flex-wrap: wrap;
+
+            &_option{
+                min-height: 50px;
+                width: 100%;
+
+                a{
+                    .menu_img {
+                        display: none;
+                    }
+
+                    .menu_text{
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

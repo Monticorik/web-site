@@ -1,0 +1,35 @@
+@import "../../../style/variables.css";
+
+.filters_section.like_page{
+    #limit_filter{
+        grid-column: 5 / 8;
+    }
+}
+
+@media (max-width: 1500px){
+
+}
+
+@media (max-width: 1200px){
+
+}
+
+@media (max-width: 992px){
+
+}
+
+@media (max-width: 768px){
+
+}
+
+@media (max-width: 576px){
+
+}
+
+@media (max-width: 375px){
+    .filters_section.like_page{
+        #limit_filter{
+            grid-column: 4 / 6;
+        }
+    }
+}

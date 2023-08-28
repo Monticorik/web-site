@@ -1,0 +1,91 @@
+@import "../../resources/icon-fonts/icon-font.css", "../../style/variables.css";
+
+@mixin buttons-style{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.back_button{
+    @include buttons-style;
+    height: 2.5vw;
+    min-height: 35px;
+    max-height: 40px;
+    background-color: var(--pink);
+    
+    i{
+        font-size: var(--font-md);
+        color: var(--red);
+    }
+
+    &:hover,
+    &:focus{
+        background-color: var(--red);
+
+        i{
+            color: white;
+        }
+    }
+}
+
+.close_button{
+    @include buttons-style;
+
+    width: 6vw;
+    max-width: 40px;
+    min-width: 35px;
+    height: 6vw;
+    max-height: 40px;
+    min-height: 35px;
+    background-color: var(--white-alt);
+    font-size: var(--font-md);
+    color: var(--red);
+}
+
+.update_button{
+    @include buttons-style;
+    background-color: var(--white);
+
+    i{
+        font-size: var(--font-sm);
+        color: var(--red);
+    }
+
+    &:hover,
+    &:focus{
+        background-color: var(--pink);
+
+        i{
+            color: var(--red);
+        }
+    }
+
+    &:active{
+        background-color: var(--red);
+
+        i{
+            color: var(--white);
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .back_button{
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 576px){
+    .back_button{
+        height: 35px;
+    }
+}
+
+@media (max-width: 375px){
+    .back_button{
+        height: 40px;
+    }
+}

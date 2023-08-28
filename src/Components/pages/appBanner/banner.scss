@@ -1,0 +1,69 @@
+@import '../../../style/variables.css';
+
+[data-dark-them] .right_side.first_page{
+    main{
+        .banner{
+            &::before{
+                background-color: var(--white-alt);
+            }
+        }
+    }
+}
+
+
+.right_side.first_page{
+    padding-right: 0;
+
+    main{
+        position: unset;
+        padding-top: 0;
+
+        .banner{
+            position: relative;
+            width: 50vw;
+            height: min-content;
+            float: right;
+
+            &::before{
+                content: '';
+                position: absolute;
+                z-index: 10;
+                top: 5%;
+                right: 5%;
+                display: block;
+                width: 90%;
+                height: 90%;
+                border-radius: 50px;
+                background-color: var(--pink);
+            }
+        
+            img{
+                position: relative;
+                z-index: 20;
+                right: 0;
+                width: 50vw;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1500px){
+
+}
+
+@media (max-width: 1200px){
+
+}
+
+@media (max-width: 992px){
+
+}
+
+@media (max-width: 768px){
+
+}
+
+@media (max-width: 576px){
+
+}

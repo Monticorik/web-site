@@ -1,0 +1,67 @@
+@import "../../style/variables.css";
+
+.label{
+    grid-column: 2/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 2.5vw;
+    min-height: 35px;
+    max-height: 40px;
+    padding: 10px;
+    text-transform: uppercase;
+
+    span{
+        font-size: var(--font-sm);
+        font-weight: 500;
+    }
+}
+
+.label[data-color="red"]{
+    background-color: var(--red);
+
+    span{
+        color: white;
+    }
+}
+
+.label[data-color="pink"]{
+    background-color: var(--pink);
+
+    span{
+        color: var(--red);
+    }
+}
+
+@media (max-width: 1500px){
+
+}
+
+@media (max-width: 1200px){
+
+}
+
+@media (max-width: 992px){
+
+}
+
+@media (max-width: 768px){
+    .label{
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 576px){
+    .label{
+        grid-column: 2 / 5;
+        height: 35px;
+    }
+}
+
+@media (max-width: 375px){
+    .label{
+        grid-column: 2 / 4;
+        height: 40px;
+    }
+}

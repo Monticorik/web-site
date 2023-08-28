@@ -1,0 +1,229 @@
+@import "../../../style/variables.css";
+
+.filters_section.galery_page{
+    grid-template-rows: repeat(4, 1fr);
+    height: auto;
+    max-height: unset;
+    min-height: unset;
+
+    // .back_button,
+    // .label,
+    .upload_image{
+        height: 2.5vw;
+        min-height: 35px;
+        max-height: 40px;
+    }
+
+    .back_button{
+        grid-column: 1 / 2;
+    }
+
+    .label{
+        grid-column: 2 / 5;
+    }
+
+    .upload_image{
+        grid-column: 10 / 13;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5vw;
+        border-radius: 10px;
+        width: 100%;
+        background-color: var(--pink);
+        cursor: pointer;
+
+        i{
+            font-size: var(--font-sm);
+            font-weight: 500;
+            color: var(--red);
+        }
+
+        span{
+            font-size: var(--font-sm);
+            font-weight: 500;
+            color: var(--red);
+            text-transform: uppercase;
+            letter-spacing: 0.15vw;
+        }
+
+        &:hover,
+        &:focus{
+            background-color: var(--red);
+            
+            i{
+                color: white;
+            }
+
+            span{
+                color: white;
+            }
+        }
+    }
+
+    .galery_filters{
+        grid-column: 1 / 13;
+        grid-row: 2 / 5;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        border-radius: 1vw;
+        background-color: var(--background-alt);
+
+        #order_filter,
+        #type_filter,
+        #breeds_filter{
+            flex-basis: 50%;
+        }
+
+        #order_filter,
+        #type_filter{
+            padding: .5vw;
+            padding-bottom: 0px;
+        }
+
+        #limit_filter{
+            flex-basis: 38%;
+        }
+
+        .order,
+        .type,
+        .breeds,
+        .limit{
+            &__control{
+                border-color: var(--white);
+                background-color: var(--white);
+
+                &--menu-is-open{
+                    border-color: var(--pink);
+                    border-bottom: none;
+                    border-radius: 10px 10px 0 0; 
+                }
+
+                &:hover{
+                    border-color: var(--pink); 
+                }
+        
+                &:focus{
+                    border-color: var(--pink);
+                }
+            }
+
+            &__menu{
+                background-color: var(--white);
+            }
+        }
+
+        .update_block{
+            flex-basis: 10%;
+            align-self: flex-end;
+
+            .update_button{
+                height: 2.5vw;
+                min-height: 35px;
+                max-height: 40px;
+                width: 2.5vw;
+                min-width: 35px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        #breeds_filter,
+        #limit_filter,
+        .update_block{
+            padding: .5vw;
+            padding-top: 0px;
+        }
+
+
+    }
+}
+
+@media (max-width: 1500px){
+
+}
+
+@media (max-width: 1200px){
+
+}
+
+@media (max-width: 992px){
+
+}
+
+@media (max-width: 768px){
+    .filters_section.galery_page{
+        .upload_image{
+            border-radius: 5px;
+            gap: 10px;
+        } 
+
+        .galery_filters{
+            #order_filter,
+            #type_filter{
+                padding: 1.5vw;
+            }
+    
+            #breeds_filter,
+            #limit_filter,
+            .update_block{
+                padding: 1.5vw;
+            }
+
+            #limit_filter{
+                flex-basis: 35%;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px){
+    .filters_section.galery_page{
+        .upload_image{
+            grid-column: 6 / 9;
+            height: 35px;
+        }
+
+        .galery_filters{
+            grid-column: 1 / 9;
+        }
+    }
+}
+
+@media (max-width: 375px){
+    .filters_section.galery_page{
+        grid-template-rows: repeat(2, 40px) repeat(2, 1fr);
+
+        .upload_image{
+            grid-column: 1 / 6;
+            grid-row: 2 / 3;
+            height: 40px;
+        }
+
+        .galery_filters{
+            grid-column: 1 / 6;
+            grid-row: 3 / 5;
+            padding: 8px;
+
+            #order_filter,
+            #type_filter,
+            #breeds_filter,
+            #limit_filter,
+            .update_block{
+                flex-basis: 100%;
+                padding: 2px;
+            }
+
+            .update_block{
+                margin-top: 20px;
+
+                .update_button{
+                    width: 100%;
+                }
+                
+            }
+        }
+    }
+     
+}
