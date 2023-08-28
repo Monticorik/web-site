@@ -8,6 +8,7 @@ import './appHeader.scss';
 const AppHeader = () => {
     const location = useLocation();
     const isFirstPage = location.pathname === '/web-site';
+    console.log(location.pathname === '/web-site');
     const [isChecked, setIsCheked] = useState(false);
 
     const onSwitchTheme = () => {

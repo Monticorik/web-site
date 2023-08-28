@@ -1,6 +1,6 @@
 @import '../../../style/variables.css';
 
-[data-dark-them] .right_side.first_page{
+[data-dark-them = "true"] .right_side.first_page{
     main{
         .banner{
             &::before{
