@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Page Not Found</title>
+  <script>
+    // Загрузите ваш React приложение
+    // Измените путь к файлу index.html, если он отличается
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '/web-site/build/index.html', true);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        document.open();
+        document.write(xhr.responseText);
+        document.close();
+      }
+    };
+    xhr.send();
+  </script>
+</head>
+<body>
+  <p>Page not found. Redirecting...</p>
+</body>
+</html>
