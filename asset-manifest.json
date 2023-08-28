@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/web-site/static/css/main.ca3ee82e.css",
-    "main.js": "/web-site/static/js/main.d59cec67.js",
+    "main.css": "/web-site/static/css/main.9e1203c9.css",
+    "main.js": "/web-site/static/js/main.31644b53.js",
     "static/media/girl-and-pet 1.svg": "/web-site/static/media/girl-and-pet 1.903162351b796720620d0d24bf7d41b9.svg",
     "static/media/images-search.svg": "/web-site/static/media/images-search.0bd085301e1742660e1a66eb7567b15a.svg",
     "static/media/vote-table.svg": "/web-site/static/media/vote-table.25b240e28538afc84ea85b1dd11a0464.svg",
@@ -19,11 +19,11 @@
     "static/media/slick.ttf": "/web-site/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/web-site/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/web-site/index.html",
-    "main.ca3ee82e.css.map": "/web-site/static/css/main.ca3ee82e.css.map",
-    "main.d59cec67.js.map": "/web-site/static/js/main.d59cec67.js.map"
+    "main.9e1203c9.css.map": "/web-site/static/css/main.9e1203c9.css.map",
+    "main.31644b53.js.map": "/web-site/static/js/main.31644b53.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca3ee82e.css",
-    "static/js/main.d59cec67.js"
+    "static/css/main.9e1203c9.css",
+    "static/js/main.31644b53.js"
   ]
 }
